@@ -1,4 +1,4 @@
-package ini.requrest.test.utils;
+package in.requrest.test.utils;
 
 public class Constants {
 

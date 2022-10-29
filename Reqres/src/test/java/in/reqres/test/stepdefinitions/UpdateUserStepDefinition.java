@@ -1,7 +1,7 @@
 package in.reqres.test.stepdefinitions;
 
-import ini.requrest.test.models.UserInfo;
-import ini.requrest.test.tasks.Update;
+import in.requrest.test.models.UserInfo;
+import in.requrest.test.tasks.Update;
 import io.cucumber.java.en.When;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;

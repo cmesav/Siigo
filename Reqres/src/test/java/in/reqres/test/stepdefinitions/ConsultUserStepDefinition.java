@@ -1,17 +1,17 @@
 package in.reqres.test.stepdefinitions;
 
-import ini.requrest.test.exceptions.SchemaError;
-import ini.requrest.test.exceptions.StatusCodeError;
-import ini.requrest.test.questions.TheResponseCode;
-import ini.requrest.test.tasks.Consult;
-import ini.requrest.test.utils.Return;
+import in.requrest.test.exceptions.SchemaError;
+import in.requrest.test.exceptions.StatusCodeError;
+import in.requrest.test.questions.TheResponseCode;
+import in.requrest.test.tasks.Consult;
+import in.requrest.test.utils.Return;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.module.jsv.JsonSchemaValidator;
 
 import java.io.File;
 
-import static ini.requrest.test.utils.Constants.*;
+import static in.requrest.test.utils.Constants.*;
 import static net.serenitybdd.screenplay.GivenWhenThen.*;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;

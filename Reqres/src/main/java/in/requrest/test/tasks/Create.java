@@ -1,7 +1,7 @@
-package ini.requrest.test.tasks;
+package in.requrest.test.tasks;
 
-import ini.requrest.test.models.UserInfo;
-import net.serenitybdd.rest.Ensure;
+import in.requrest.test.models.UserInfo;
+import in.requrest.test.utils.Constants;
 import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -11,8 +11,6 @@ import net.thucydides.core.annotations.Step;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import static ini.requrest.test.utils.Constants.PATH_CREATE;
 
 public class Create implements Task {
 
@@ -28,7 +26,7 @@ public class Create implements Task {
         Logger logger = Logger.getLogger(Create.class.getName());
 
         actor.remember("userInfo",data);
-        actor.attemptsTo(Post.to(PATH_CREATE).with(
+        actor.attemptsTo(Post.to(Constants.PATH_CREATE).with(
                 requestSpecification -> requestSpecification
                         .header("Content-Type", "application/json")
                         .body(data).relaxedHTTPSValidation()

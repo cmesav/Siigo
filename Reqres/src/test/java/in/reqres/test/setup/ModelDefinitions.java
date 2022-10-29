@@ -1,6 +1,6 @@
 package in.reqres.test.setup;
 
-import ini.requrest.test.models.UserInfo;
+import in.requrest.test.models.UserInfo;
 import io.cucumber.java.DataTableType;
 
 import java.util.Map;

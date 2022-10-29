@@ -34,14 +34,7 @@ ext{
 }
 
 test {
-    useJUnitPlatform {
-        excludeTags("disabled")
-    }
-    systemProperties(project.gradle.startParameter.systemPropertiesArgs)
-    testLogging.showStandardStreams = true
-    testLogging.exceptionFormat = 'full'
-    outputs.upToDateWhen { false }
-    finalizedBy('aggregate')
+    systemProperties(System.getProperties())
 }
 
 dependencies {
@@ -60,3 +53,4 @@ dependencies {
 }
 
 gradle.startParameter.continueOnFailure = true
+test.finalizedBy(aggregate, reports)

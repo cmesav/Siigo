@@ -1,5 +1,6 @@
-package ini.requrest.test.tasks;
+package in.requrest.test.tasks;
 
+import in.requrest.test.utils.Constants;
 import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -9,8 +10,6 @@ import net.thucydides.core.annotations.Step;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import static ini.requrest.test.utils.Constants.*;
 
 public class Consult implements Task {
 
@@ -25,7 +24,7 @@ public class Consult implements Task {
     public <T extends Actor> void performAs(T actor) {
         Logger logger = Logger.getLogger(Consult.class.getName());
 
-        actor.attemptsTo(Get.resource(PATH_USER).with(
+        actor.attemptsTo(Get.resource(Constants.PATH_USER).with(
                 requestSpecification -> requestSpecification
                         .pathParam("id", id)
                         .relaxedHTTPSValidation()

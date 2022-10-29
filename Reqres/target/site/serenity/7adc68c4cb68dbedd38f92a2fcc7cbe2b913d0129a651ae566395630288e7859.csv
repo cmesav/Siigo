@@ -1,4 +1,2 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"As a client","consult an user","SUCCESS","2022-10-28T21:16:26.575-05:00[America/Mexico_City]","0.0","7.22"
-"As a user","new register","FAILURE","2022-10-28T21:52:36.013-05:00[America/Mexico_City]","0.0","4.03"
-"As a user","modify register","SUCCESS","2022-10-28T22:20:37.147-05:00[America/Mexico_City]","0.0","4.09"
+"As a user","modify register","ERROR","2022-10-29T11:14:25.061-05:00[America/Mexico_City]","0.0","7.51"

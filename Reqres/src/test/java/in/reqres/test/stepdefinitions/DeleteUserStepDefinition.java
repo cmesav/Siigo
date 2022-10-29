@@ -1,6 +1,6 @@
 package in.reqres.test.stepdefinitions;
 
-import ini.requrest.test.tasks.DeleteUser;
+import in.requrest.test.tasks.DeleteUser;
 import io.cucumber.java.en.When;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;

@@ -1,6 +1,6 @@
-package ini.requrest.test.utils;
+package in.requrest.test.utils;
 
-import static ini.requrest.test.utils.Constants.*;
+import static in.requrest.test.utils.Constants.*;
 
 public class Return {
 

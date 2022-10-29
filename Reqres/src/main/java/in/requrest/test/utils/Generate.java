@@ -1,7 +1,7 @@
-package ini.requrest.test.utils;
+package in.requrest.test.utils;
 
 import com.github.javafaker.Faker;
-import ini.requrest.test.models.UserInfo;
+import in.requrest.test.models.UserInfo;
 
 import java.util.Locale;
 

@@ -1,4 +1,4 @@
-package ini.requrest.test.models;
+package in.requrest.test.models;
 
 public class UserInfo {
 

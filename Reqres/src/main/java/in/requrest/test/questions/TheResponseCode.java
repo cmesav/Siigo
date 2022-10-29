@@ -1,4 +1,4 @@
-package ini.requrest.test.questions;
+package in.requrest.test.questions;
 
 import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;

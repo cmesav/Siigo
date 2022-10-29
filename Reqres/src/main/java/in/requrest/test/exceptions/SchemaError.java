@@ -1,4 +1,4 @@
-package ini.requrest.test.exceptions;
+package in.requrest.test.exceptions;
 
 public class SchemaError extends AssertionError {
 
