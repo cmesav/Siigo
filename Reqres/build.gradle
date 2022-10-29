@@ -1,0 +1,62 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+group 'sistecredito'
+version '1.0-SNAPSHOT'
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:3.2.5")
+    }
+}
+
+ext{
+    serenityVersion = '3.2.5'
+    serenityCucumberVersion = '3.2.5'
+}
+
+test {
+    useJUnitPlatform {
+        excludeTags("disabled")
+    }
+    systemProperties(project.gradle.startParameter.systemPropertiesArgs)
+    testLogging.showStandardStreams = true
+    testLogging.exceptionFormat = 'full'
+    outputs.upToDateWhen { false }
+    finalizedBy('aggregate')
+}
+
+dependencies {
+    implementation "net.serenity-bdd:serenity-screenplay:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-junit5:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay-rest:$rootProject.ext.serenityVersion"
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+
+    testImplementation "io.rest-assured:json-schema-validator:5.2.0"
+    testImplementation "net.serenity-bdd:serenity-cucumber:$rootProject.ext.serenityCucumberVersion"
+    testImplementation 'org.junit.platform:junit-platform-launcher:1.9.0'
+    testImplementation "org.junit.jupiter:junit-jupiter-engine:5.9.0"
+    testImplementation "org.junit.vintage:junit-vintage-engine:5.9.0"
+
+}
+
+gradle.startParameter.continueOnFailure = true
