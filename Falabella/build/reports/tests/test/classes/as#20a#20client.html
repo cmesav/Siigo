@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class as a client</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class as a client</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; as a client</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1m18.04s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">buy product</td>
+<td class="success">1m18.04s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>?[92m|-- Given Search &quot;falabella&quot; website?[0m
+?[92m|---- Qa opens the browser at https://www.google.com?[0m
+?[92m|---- Qa go to?[0m
+?[92m|------ Qa enters 'falabella' then hits [ENTER] into Search on google?[0m
+?[92m|------ Qa clicks on Access to first result?[0m
+?[92m|-- When I choose one product of &quot;ps4 games&quot; with extended warranty?[0m
+?[92m|---- Qa add to?[0m
+?[92m|------ Qa clicks on Button to deny popup?[0m
+?[92m|------ Qa enters 'ps4 games' then hits [ENTER] into Search area?[0m
+?[92m|------ Qa clicks on Product?[0m
+?[92m|------ Qa remember?[0m
+?[92m|------ Qa clicks on Add to bag?[0m
+?[92m|---- Qa modify product?[0m
+?[92m|------ Qa clicks on Button to increment cuantity?[0m
+?[92m|------ Qa clicks on arrow down?[0m
+?[92m|------ Qa remember?[0m
+?[92m|------ Qa clicks on Add extended warranty?[0m
+?[92m|------ Qa clicks on go to the shopping bag?[0m
+?[92m|-- Then I see the product name in the shopping bag?[0m
+?[92m|---- Then the product name should be 'Crysis Remastered PS4'?[0m
+?[92m|-- And the total purchase value?[0m
+?[92m|---- Then the purchase value should be (366780)?[0m
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Starting ChromeDriver 106.0.5249.61 (511755355844955cd3e264779baf0dd38212a4d0-refs/branch-heads/5249@{#569}) on port 55443
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+oct 29, 2022 5:06:33 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+oct 29, 2022 5:06:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTENCIA: Unable to find an exact match for CDP version 106, so returning the closest version found: a no-op implementation
+oct 29, 2022 5:06:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFORMACIÓN: Unable to find CDP implementation matching 106.
+oct 29, 2022 5:06:33 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+ADVERTENCIA: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.1.4` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+oct 29, 2022 5:06:53 PM co.com.falabella.qa.tasks.GoTo performAs
+INFORMACIÓN: The user search the ecommerce
+oct 29, 2022 5:07:19 PM co.com.falabella.qa.interactions.Remember performAs
+INFORMACIÓN: The user remember product info successfully
+oct 29, 2022 5:07:21 PM co.com.falabella.qa.tasks.AddTo performAs
+INFORMACIÓN: The user add product successfully
+oct 29, 2022 5:07:26 PM co.com.falabella.qa.interactions.Remember performAs
+INFORMACIÓN: The user remember amount and assurance value
+oct 29, 2022 5:07:36 PM co.com.falabella.qa.tasks.ModifyProduct performAs
+INFORMACIÓN: The user add amount and assurance successfully
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4</a> at 29/10/2022 05:07:46 PM</p>
+</div>
+</div>
+</body>
+</html>

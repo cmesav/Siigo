@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Test Falabella</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="0dafad6bc02a9588799c6353571835f5d50bd8e0424bbdaa784d03acc5b5014d.html">As A Client</a></span>
+                > <span class="truncate-60"><a
+                    href="d46774aa93db8a2f3b4cb501cc48837f44f9c290b0bc4a91e82209f51305958d.html">buy product </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 29-10-2022 17:06</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">As A Client </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                I want to buy some products on falabella website
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">buy product
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="0cf640002f22cfefb8cfb2a8afbf13f52efb22886e0e4550381279a1f1168291.png" title=" Given Search &quot;falabella&quot; website" width="1366"/>
+                <img src="0cf640002f22cfefb8cfb2a8afbf13f52efb22886e0e4550381279a1f1168291.png" title=" Qa opens the browser at https://www.google.com" width="1366"/>
+                <img src="399da21fe6757a7ee462ffa05068e868755c3a1a112fc2496608bc5aef00b5f1.png" title=" Qa go to" width="1366"/>
+                <img src="399da21fe6757a7ee462ffa05068e868755c3a1a112fc2496608bc5aef00b5f1.png" title=" Qa enters 'falabella' then hits [ENTER] into Search on google" width="1366"/>
+                <img src="5330051862ff5cf459c18f1c74f5ecebf82a705ee4e9d276d19934daabc8e7a6.png" title=" Qa clicks on Access to first result" width="1366"/>
+                <img src="5330051862ff5cf459c18f1c74f5ecebf82a705ee4e9d276d19934daabc8e7a6.png" title=" Qa go to (completed)" width="1366"/>
+                <img src="5330051862ff5cf459c18f1c74f5ecebf82a705ee4e9d276d19934daabc8e7a6.png" title=" Given Search &quot;falabella&quot; website (completed)" width="1366"/>
+                <img src="0fee76911d6252a811734616d92a4be76bc85a525450b50f800bc123ba54475e.png" title=" When I choose one product of &quot;ps4 games&quot; with extended warranty" width="1366"/>
+                <img src="0fee76911d6252a811734616d92a4be76bc85a525450b50f800bc123ba54475e.png" title=" Qa add to" width="1366"/>
+                <img src="0fee76911d6252a811734616d92a4be76bc85a525450b50f800bc123ba54475e.png" title=" Qa clicks on Button to deny popup" width="1366"/>
+                <img src="6ba7a7c6670160d5743a4390fc43f8370958eb8b3f58d0bb5ef817e53f603fcb.png" title=" Qa enters 'ps4 games' then hits [ENTER] into Search area" width="1366"/>
+                <img src="cbdc3e5262cdf8b7a1b2976cd6dca48adeebc8a846081ac52b0e07d3f9cdc38f.png" title=" Qa clicks on Product" width="1366"/>
+                <img src="fb0390b415baa9ca86aae60feb68a6bf87f96411ba682955766d5b91adeb9c27.png" title=" Qa remember" width="1366"/>
+                <img src="be06f4e83fc961c3acd4fce658618c717af60aa34cd0e03d63eb72c1fa190350.png" title=" Qa clicks on Add to bag" width="1366"/>
+                <img src="d4d64f06aa64245ab29c09d6f55f04f1e3eb0b857316356cc5c554da80fd88fc.png" title=" Qa add to (completed)" width="1366"/>
+                <img src="9726f810cbec5bb12bbd1c4caacfcf96f0b1646d707383377b20df794bd66261.png" title=" Qa modify product" width="1366"/>
+                <img src="9726f810cbec5bb12bbd1c4caacfcf96f0b1646d707383377b20df794bd66261.png" title=" Qa clicks on Button to increment cuantity" width="1366"/>
+                <img src="7e96894d7aa84bbc96dd22b5b046373a0ea3f94c89ce31b49f7c19791757a09d.png" title=" Qa clicks on arrow down" width="1366"/>
+                <img src="7e96894d7aa84bbc96dd22b5b046373a0ea3f94c89ce31b49f7c19791757a09d.png" title=" Qa remember" width="1366"/>
+                <img src="4920ae856ac97b53bfbd31556242ffb5fea6f33296fab4b3ee8352bfc21cb3a1.png" title=" Qa clicks on Add extended warranty" width="1366"/>
+                <img src="4f8e7ba7079ded6ef14c486df5f7d491aa69815ad678180635a638a18c4d4cba.png" title=" Qa clicks on go to the shopping bag" width="1366"/>
+                <img src="4f8e7ba7079ded6ef14c486df5f7d491aa69815ad678180635a638a18c4d4cba.png" title=" Qa modify product (completed)" width="1366"/>
+                <img src="4f8e7ba7079ded6ef14c486df5f7d491aa69815ad678180635a638a18c4d4cba.png" title=" When I choose one product of &quot;ps4 games&quot; with extended warranty (completed)" width="1366"/>
+                <img src="c33129b3f17be925b1f63cbd444c32758edc079ce4127b4a2c9dc7023141a3c0.png" title=" Then I see the product name in the shopping bag" width="1366"/>
+                <img src="c33129b3f17be925b1f63cbd444c32758edc079ce4127b4a2c9dc7023141a3c0.png" title=" Then the product name should be 'Crysis Remastered PS4'" width="1366"/>
+                <img src="c33129b3f17be925b1f63cbd444c32758edc079ce4127b4a2c9dc7023141a3c0.png" title=" Then I see the product name in the shopping bag (completed)" width="1366"/>
+                <img src="c33129b3f17be925b1f63cbd444c32758edc079ce4127b4a2c9dc7023141a3c0.png" title=" And the total purchase value" width="1366"/>
+                <img src="c33129b3f17be925b1f63cbd444c32758edc079ce4127b4a2c9dc7023141a3c0.png" title=" Then the purchase value should be (366780)" width="1366"/>
+                <img src="c33129b3f17be925b1f63cbd444c32758edc079ce4127b4a2c9dc7023141a3c0.png" title=" And the total purchase value (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.2.5</span>
+</div>
+</body>
+</html>

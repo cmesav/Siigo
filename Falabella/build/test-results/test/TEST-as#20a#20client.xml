@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="as a client" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-29T22:06:23" hostname="SISTE193" time="78.044">
+  <properties/>
+  <testcase name="buy product" classname="as a client" time="78.044"/>
+  <system-out><![CDATA[?[92m|-- Given Search "falabella" website?[0m
+?[92m|---- Qa opens the browser at https://www.google.com?[0m
+?[92m|---- Qa go to?[0m
+?[92m|------ Qa enters 'falabella' then hits [ENTER] into Search on google?[0m
+?[92m|------ Qa clicks on Access to first result?[0m
+?[92m|-- When I choose one product of "ps4 games" with extended warranty?[0m
+?[92m|---- Qa add to?[0m
+?[92m|------ Qa clicks on Button to deny popup?[0m
+?[92m|------ Qa enters 'ps4 games' then hits [ENTER] into Search area?[0m
+?[92m|------ Qa clicks on Product?[0m
+?[92m|------ Qa remember?[0m
+?[92m|------ Qa clicks on Add to bag?[0m
+?[92m|---- Qa modify product?[0m
+?[92m|------ Qa clicks on Button to increment cuantity?[0m
+?[92m|------ Qa clicks on arrow down?[0m
+?[92m|------ Qa remember?[0m
+?[92m|------ Qa clicks on Add extended warranty?[0m
+?[92m|------ Qa clicks on go to the shopping bag?[0m
+?[92m|-- Then I see the product name in the shopping bag?[0m
+?[92m|---- Then the product name should be 'Crysis Remastered PS4'?[0m
+?[92m|-- And the total purchase value?[0m
+?[92m|---- Then the purchase value should be (366780)?[0m
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 106.0.5249.61 (511755355844955cd3e264779baf0dd38212a4d0-refs/branch-heads/5249@{#569}) on port 55443
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+oct 29, 2022 5:06:33 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+oct 29, 2022 5:06:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTENCIA: Unable to find an exact match for CDP version 106, so returning the closest version found: a no-op implementation
+oct 29, 2022 5:06:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFORMACIÓN: Unable to find CDP implementation matching 106.
+oct 29, 2022 5:06:33 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+ADVERTENCIA: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.1.4` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+oct 29, 2022 5:06:53 PM co.com.falabella.qa.tasks.GoTo performAs
+INFORMACIÓN: The user search the ecommerce
+oct 29, 2022 5:07:19 PM co.com.falabella.qa.interactions.Remember performAs
+INFORMACIÓN: The user remember product info successfully
+oct 29, 2022 5:07:21 PM co.com.falabella.qa.tasks.AddTo performAs
+INFORMACIÓN: The user add product successfully
+oct 29, 2022 5:07:26 PM co.com.falabella.qa.interactions.Remember performAs
+INFORMACIÓN: The user remember amount and assurance value
+oct 29, 2022 5:07:36 PM co.com.falabella.qa.tasks.ModifyProduct performAs
+INFORMACIÓN: The user add amount and assurance successfully
+]]></system-err>
+</testsuite>
