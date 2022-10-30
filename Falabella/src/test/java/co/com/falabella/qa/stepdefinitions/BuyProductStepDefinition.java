@@ -24,7 +24,7 @@ public class BuyProductStepDefinition {
 
     @Given("Search {string} website")
     public void searchWebsite(String site) {
-        theActorInTheSpotlight().attemptsTo(
+        theActorInTheSpotlight().wasAbleTo(
                 Open.url(URL),
                 GoTo.web(site)
         );
